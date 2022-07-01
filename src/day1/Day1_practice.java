@@ -1,20 +1,16 @@
 package day1;
 
+import java.util.Scanner;
+
 public class Day1_practice {
-	static int a = 3;
-	static int b;
-
-	static void m(int x) {
-		System.out.println("x = " + x);
-		System.out.println("a = " + a);
-		System.out.println("b = " + b);
-	}
-
-	static {
-		b = a+1;
-	}
-
 	public static void main(String args[]) {
-		m(20);
+		System.out.println("enter the four digit year");
+		Scanner sc = new Scanner(System.in);
+		int year = sc.nextInt();
+
+		if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
+			System.out.println(year + " is a Leap Year");
+		else
+			System.out.println(year + " is not a Leap Year");
 	}
 }
